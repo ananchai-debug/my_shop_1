@@ -41,9 +41,18 @@
     <!-- Main Content Container -->
     <main class="bg-gray-50 flex-grow space-y-8 pb-12">
 
-        <!-- Hero Section -->
-        <section class="bg-[#fcf8f2] py-12 px-6 border-b border-amber-100">
-            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <!-- Hero Section พร้อมใส่ภาพแบนเนอร์ร้านด้านหลังรูปเครื่องดื่ม -->
+        <section class="relative py-12 px-6 border-b border-amber-100 overflow-hidden">
+            <!-- 📌จุดเปลี่ยนรูปภาพ: ภาพพื้นหลังแบนเนอร์ร้านจากโฟลเดอร์ assets/images/ บน GitHub -->
+            <img src="./assets/images/banner.jpg" 
+                 alt="แบนเนอร์ร้าน" 
+                 onerror="this.style.display='none';" 
+                 class="absolute inset-0 w-full h-full object-cover">
+            
+            <!-- ชั้น Overlay สีจางเพื่อให้ตัวหนังสือด้านหน้าอ่านง่ายขึ้น -->
+            <div class="absolute inset-0 bg-[#fcf8f2]/85"></div>
+
+            <div class="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 z-10">
                 <div class="space-y-4 max-w-lg">
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
                         สดชื่นทุกแก้ว<br>กับเครื่องดื่มของเรา
@@ -56,10 +65,10 @@
                     </button>
                 </div>
                 <div class="flex gap-4">
-                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/hero-drink-1.png บน GitHub -->
-                    <img src="📌assets/images/MatchaGreenTea.png📌" alt="ชาไทย" onerror="this.src='https://via.placeholder.com/128x176?text=Drink+1';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
-                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ ./assets/images/hero-drink-2.png บน GitHub -->
-                    <img src="📌assets/images/ThaiMilkTea.png📌" alt="มัทฉะ" onerror="this.src='https://via.placeholder.com/128x176?text=Drink+2';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/ บน GitHub -->
+                    <img src="./assets/images/hero-drink-1.png" alt="ชาไทย" onerror="this.src='https://via.placeholder.com/128x176?text=Drink+1';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/ บน GitHub -->
+                    <img src="./assets/images/hero-drink-2.png" alt="มัทฉะ" onerror="this.src='https://via.placeholder.com/128x176?text=Drink+2';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
                 </div>
             </div>
         </section>
