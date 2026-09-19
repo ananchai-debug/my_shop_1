@@ -3,580 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ร้านเครื่องดื่มของฉัน - Fresh Drink</title>
-    <!-- Tailwind CSS CDN -->
+    <title>แฟ้มสะสมผลงานและคลังเอกสาร - Cloud Portfolio</title>
+    <!-- โหลด Tailwind CSS ผ่าน CDN เพื่อความสวยงามและใช้งานง่าย -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter & Prompt -->
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Prompt', sans-serif;
-            background-color: #fcf8f5;
-        }
-        .comment-pin {
-            animation: pulse-ring 2s infinite;
-        }
-        @keyframes pulse-ring {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(234, 88, 12, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(234, 88, 12, 0); }
-        }
+        body { font-family: 'Kanit', sans-serif; }
     </style>
 </head>
-<body class="bg-[#3D2314] text-slate-800 relative selection:bg-orange-500 selection:text-white">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <nav class="bg-[#3D2314] text-white py-4 px-6 md:px-12 flex justify-between items-center shadow-md sticky top-0 z-40 border-b border-[#5a3420]">
-        <div class="flex items-center space-x-3">
-            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center p-1 shadow-inner">
-		<!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub Logo ร้าน -->
-                <img src="📌https://placehold.co/100x100/ffedd5/c2410c?text=Logo📌" 
-			alt="Fresh Drink Logo" 
-			class="w-full h-full object-cover rounded-full" 
-			onerror="this.src='https://placehold.co/100x100/ffedd5/c2410c?text=Drink'">
-            </div>
+    <!-- Header / Navbar -->
+    <header class="bg-indigo-700 text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
             <div>
-                <h1 class="font-bold text-lg leading-tight">ร้านเครื่องดื่มของฉัน</h1>
-                <p class="text-xs text-orange-200">Fresh Drink</p>
+                <h1 class="text-2xl font-bold">📌นายอนันต์ชัย เพชรพันธ์📌</h1>
+                <p class="text-indigo-200 text-sm">📌Digital Business Technology & Cloud Educator📌</p>
             </div>
+            <span class="bg-indigo-800 text-indigo-100 text-xs px-3 py-1 rounded-full border border-indigo-500">
+                Hosted on GitHub Pages
+            </span>
         </div>
-        <div class="hidden md:flex items-center space-x-8 font-medium">
-            <a href="#hero" class="hover:text-orange-300 transition">หน้าแรก</a>
-            <a href="#menu" class="text-orange-400 border-b-2 border-orange-400 pb-1">เมนูแนะนำ</a>
-            <a href="#extra-menu" class="hover:text-orange-300 transition">เมนูเพิ่มเติม</a>
-            <a href="#promo" class="hover:text-orange-300 transition">โปรโมชั่น</a>
-        </div>
-        <!-- Comment Mode Toggle Button -->
-        <div class="flex items-center space-x-3">
-            <button id="toggleCommentMode" onclick="toggleCommentMode()" class="bg-amber-600 hover:bg-amber-700 text-white text-sm px-4 py-2 rounded-full shadow transition flex items-center space-x-2">
-                <i class="fa-solid fa-comments"></i>
-                <span id="commentModeText">เปิดโหมดคอมเมนต์จุดแก้ไข</span>
-                <span id="commentCountBadge" class="bg-red-500 text-white text-xs px-2 py-0.5 rounded-full">0</span>
-            </button>
-        </div>
-    </nav>
+    </header>
 
-    <section id="hero" class="relative bg-[#3D2314] text-white overflow-hidden py-12 md:py-20 px-6 md:px-16">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-6 z-10">
-                <h2 class="text-4xl md:text-5xl font-extrabold leading-tight">
-                    สดชื่นทุกแก้ว<br>กับเครื่องดื่มของเรา
-                </h2>
-                <p class="text-orange-100 text-lg">เครื่องดื่มคุณภาพ ราคานักเรียน</p>
-                <div>
-                    <a href="#menu" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition transform hover:-translate-y-0.5">
-                        ดูเมนู
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow space-y-8">
+
+        <!-- Section 1: Profile & Intro -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6">
+            <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+            <img id="profile-img" 
+                 src="./assets/images/ChatGPT Image Aug 7, 2026, 12_15_40 PM.png" 
+                 alt="รูปโปรไฟล์" 
+                 onerror="this.src='https://via.placeholder.com/150?text=Upload+Image';"
+                 class="w-32 h-32 rounded-full object-cover border-4 border-indigo-100 shadow">
+            
+            <div class="space-y-2 text-center md:text-left">
+                <h2 class="text-xl font-bold text-gray-900">📌เกี่ยวกับฉัน & โครงสร้างระบบ📌</h2>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                    📌เว็บไซต์นี้สร้างขึ้นเพื่อทดสอบการวางสถาปัตยกรรมคลาวด์เบื้องต้น โดยทำการ Deploy โค้ดผ่านระบบ **GitHub Actions (CI/CD)** 
+                    และเชื่อมต่อพื้นที่จัดเก็บข้อมูลไฟล์สาธารณะด้วย **GitHub Static Storage**📌
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Cloud Resource & Document Download -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
+            <h2 class="text-lg font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
+                📌📂 คลังเอกสารดาวน์โหลด (GitHub Asset Hub)📌
+            </h2>
+            <p class="text-sm text-gray-500">
+                📌เอกสารทั้งหมดถูกจัดเก็บและเรียกใช้งานโดยตรงจากโฟลเดอร์ใน GitHub Repository📌
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                <!-- Document Card 1: Resume -->
+                <div class="p-4 border rounded-lg bg-gray-50 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-medium text-gray-800">📌เอกสารประวัติส่วนตัว (Resume)📌</h3>
+                        <p class="text-xs text-gray-500">📌ไฟล์รูปแบบ PDF (GitHub Storage)📌</p>
+                    </div>
+                    <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/resume.pdf -->
+                    <a href="./assets/docs/Poster A4 (1).pdf">
+                        เปิดดูไฟล์
+                    </a>
+                </div>
+
+                <!-- Document Card 2: Topology Diagram -->
+                <div class="p-4 border rounded-lg bg-gray-50 flex justify-between items-center">
+                    <div>
+                        <h3 class="font-medium text-gray-800">📌แผนผังระบบ (Topology Diagram)📌</h3>
+                        <p class="text-xs text-gray-500">📌ไฟล์รูปแบบ PDF/PNG📌</p>
+                    </div>
+                    <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                     <a href="./assets/docs/Poster A4 (1).pdf">
+                        เปิดดูไฟล์
                     </a>
                 </div>
             </div>
-            <div class="relative flex justify-center">
-                <div class="absolute inset-0 bg-gradient-to-tr from-amber-900/30 to-transparent rounded-3xl filter blur-xl"></div>
-                <div class="relative flex space-x-4 z-10">
-                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                    <img src="📌https://placehold.co/250x380/d97706/ffffff?text=Thai+Tea📌" alt="Thai Milk Tea" class="w-44 md:w-52 h-72 md:h-80 object-cover rounded-2xl shadow-2xl border-4 border-amber-900/50 transform -rotate-3">
-                    <img src="📌https://placehold.co/250x380/15803d/ffffff?text=Matcha📌" alt="Matcha Milk" class="w-44 md:w-52 h-72 md:h-80 object-cover rounded-2xl shadow-2xl border-4 border-amber-900/50 transform rotate-3 mt-6">
+        </section>
+
+        <!-- Section 3: Contact Form / Client-side Action -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
+            <h2 class="text-lg font-bold text-gray-900 border-b pb-2">
+                 💬 ฝากข้อความติดต่อ (Client-Side Interactive Form)
+            </h2>
+            
+            <form id="contact-form" class="space-y-4 max-w-lg">
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-1">ชื่อผู้ติดต่อ</label>
+                    <input type="text" id="sender-name" required placeholder="กรอกชื่อของคุณ" 
+                           class="w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <main class="bg-[#fcf8f5] py-12 px-4 md:px-12 text-slate-800">
-        <div class="max-w-6xl mx-auto space-y-16">
-
-            <section id="menu" class="space-y-8">
-                <div class="text-center space-y-2">
-                    <h3 class="text-2xl md:text-3xl font-bold text-[#3D2314]">เมนูแนะนำ</h3>
-                    <p class="text-slate-500 text-sm">เมนูยอดนิยมของร้าน</p>
+                <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-1">ข้อความ</label>
+                    <textarea id="sender-message" rows="3" required placeholder="ข้อความที่ต้องการฝากไว้..." 
+                              class="w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
                 </div>
+                <button type="button" onclick="submitMessage()" 
+                        class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-md font-medium transition shadow-sm">
+                    ส่งข้อความทดสอบ
+                </button>
+            </form>
+        </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Menu Card 1 -->
-                    <div class="bg-white rounded-3xl p-6 shadow-lg border border-orange-100 flex flex-col items-center text-center relative group">
-                        <div class="w-full h-60 bg-orange-50 rounded-2xl overflow-hidden mb-4 relative">
-                            <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                            <img src="📌https://placehold.co/400x300/fed7aa/c2410c?text=ชาไทยนมสด📌" alt="ชาไทยนมสด" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-800">ชาไทยนมสด</h4>
-                        <p class="text-slate-500 text-sm mt-1 mb-4">หวาน หอม กลมกล่อม</p>
-                        <div class="w-full flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
-                            <span class="text-2xl font-black text-orange-600">฿40</span>
-                            <button onclick="openPdfViewer('ชาไทยนมสด', 'รีวิวสูตรต้นตำรับและการคั่วใบชาไทยแท้ 100% พร้อมจุดตรวจสอบความเข้มข้น', 'page1')" class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow transition flex items-center space-x-1">
-                                <span>เปิดดูรีวิว</span>
-                                <i class="fa-solid fa-arrow-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Menu Card 2 -->
-                    <div class="bg-white rounded-3xl p-6 shadow-lg border border-orange-100 flex flex-col items-center text-center relative group">
-                        <div class="w-full h-60 bg-orange-50 rounded-2xl overflow-hidden mb-4 relative">
-                            <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                            <img src="📌https://placehold.co/400x300/bbf7d0/15803d?text=มัทฉะนมสด📌" 
-				alt="มัทฉะนมสด" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-800">มัทฉะนมสด</h4>
-                        <p class="text-slate-500 text-sm mt-1 mb-4">ชาเขียวแท้ หอมละมุน</p>
-                        <div class="w-full flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
-                            <span class="text-2xl font-black text-orange-600">฿45</span>
-                            <button onclick="openPdfViewer('มัทฉะนมสด', 'รีวิวผงมัทฉะเกรดพิธีการนำเข้าจากญี่ปุ่น และสัดส่วนการชงที่ลงตัว', 'page2')" class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow transition flex items-center space-x-1">
-                                <span>เปิดดูรีวิว</span>
-                                <i class="fa-solid fa-arrow-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="extra-menu" class="bg-[#fce7f3] rounded-3xl p-8 md:p-12 shadow-inner border border-pink-200 space-y-8">
-                <div class="text-center space-y-2">
-                    <h3 class="text-2xl md:text-3xl font-bold text-[#3D2314]">เมนูแนะนำเพิ่มเติม</h3>
-                    <p class="text-slate-600 text-sm">อีก 2 เมนูที่น่าสนใจ</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Extra Menu 1 -->
-                    <div class="bg-white rounded-3xl p-6 shadow-md flex flex-col items-center text-center relative group">
-                        <div class="w-full h-60 bg-pink-50 rounded-2xl overflow-hidden mb-4 relative">
-				<!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                            <img src="📌https://placehold.co/400x300/fed7aa/7c2d12?text=โกโก้นมสด📌" 
-				alt="โกโก้นมสด" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-800">โกโก้นมสด</h4>
-                        <p class="text-slate-500 text-sm mt-1 mb-4">โกโก้เข้มข้น หอมมัน</p>
-                        <div class="w-full flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
-                            <span class="text-2xl font-black text-orange-600">฿45</span>
-                            <button onclick="openPdfViewer('โกโก้นมสด', 'รีวิวส่วนผสมดาร์กโกโก้พรีเมียมและความลับความเข้มข้นละมุนลิ้น', 'page3')" class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow transition flex items-center space-x-1">
-                                <span>เปิดดูรีวิว</span>
-                                <i class="fa-solid fa-arrow-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Extra Menu 2 -->
-                    <div class="bg-white rounded-3xl p-6 shadow-md flex flex-col items-center text-center relative group">
-                        <div class="w-full h-60 bg-pink-50 rounded-2xl overflow-hidden mb-4 relative">
-				<!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                            <img src="📌https://placehold.co/400x300/fef08a/713f12?text=กาแฟลาเต้📌" 
-				alt="กาแฟลาเต้" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
-                        </div>
-                        <h4 class="text-xl font-bold text-slate-800">กาแฟลาเต้</h4>
-                        <p class="text-slate-500 text-sm mt-1 mb-4">นุ่ม หอม เข้มกำลังดี</p>
-                        <div class="w-full flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
-                            <span class="text-2xl font-black text-orange-600">฿50</span>
-                            <button onclick="openPdfViewer('กาแฟลาเต้', 'รีวิวเมล็ดกาแฟคั่วกลางบดสดและเทคนิคการสตีมนมเนียนนุ่ม', 'page4')" class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-5 py-2 rounded-full shadow transition flex items-center space-x-1">
-                                <span>เปิดดูรีวิว</span>
-                                <i class="fa-solid fa-arrow-right text-xs"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="promo" class="bg-gradient-to-r from-pink-100 via-rose-100 to-pink-200 rounded-3xl p-8 md:p-10 shadow-md border border-pink-300 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
-                <div class="space-y-3 z-10 text-center md:text-left">
-                    <span class="bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">โปรโมชั่นฮิต</span>
-                    <h3 class="text-3xl md:text-4xl font-extrabold text-[#3D2314]">โปรโมชั่นพิเศษ!</h3>
-                    <p class="text-xl font-bold text-rose-700">ซื้อ 2 แก้ว ลดทันที 10 บาท</p>
-                    <p class="text-xs text-slate-500">ตั้งแต่วันนี้ - 31 ธันวาคม 2569</p>
-                </div>
-                <div class="flex items-center space-x-4 z-10">
-                    <div class="bg-white/80 backdrop-blur rounded-2xl p-4 shadow-lg text-center border border-pink-300 transform rotate-2">
-                        <p class="text-xs text-slate-500 font-medium">ลดทันที</p>
-                        <p class="text-3xl font-black text-red-600">10 บาท</p>
-                    </div>
-                    <div class="flex space-x-2">
-				<!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                        <img src="📌https://placehold.co/120x160/fed7aa/c2410c?text=Drink1📌" 
-				alt="Promo drink 1" class="w-20 h-28 object-cover rounded-xl shadow-md">
-				<!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                        <img src="📌https://placehold.co/120x160/bbf7d0/15803d?text=Drink2📌" 
-				alt="Promo drink 2" class="w-20 h-28 object-cover rounded-xl shadow-md">
-                    </div>
-                </div>
-            </section>
-
-        </div>
     </main>
 
-    <footer class="bg-[#2a170e] text-white py-12 px-6 md:px-12 border-t border-[#4d2d1c]">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-            <div class="flex items-start space-x-4">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center p-1 flex-shrink-0 shadow">
-			<!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-                    <img src="📌https://placehold.co/100x100/ffedd5/c2410c?text=Logo📌" 
-			alt="Fresh Drink Logo" class="w-full h-full object-cover rounded-full"
-			onerror="this.src='https://placehold.co/100x100/ffedd5/c2410c?text=Drink'">
-                </div>
-                <div class="space-y-1">
-                    <h4 class="font-bold text-lg">ร้านเครื่องดื่มของฉัน</h4>
-                    <p class="text-xs text-orange-200">Fresh Drink</p>
-                    <p class="text-sm text-slate-300 pt-2">สดชื่นทุกแก้ว กับเครื่องดื่มคุณภาพ</p>
-                </div>
-            </div>
-
-            <!-- Creator info form matching design lines -->
-            <div class="bg-[#351e12] p-6 rounded-2xl border border-[#4d2d1c] shadow-inner space-y-4">
-                <h5 class="font-bold text-orange-300 border-b border-[#4d2d1c] pb-2 text-sm uppercase tracking-wider">ข้อมูลผู้จัดทำ</h5>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-slate-400 w-16">ชื่อ-สกุล :</span>
-                            <span class="border-b border-slate-500 flex-1 text-slate-200 pb-0.5">นายสมชาย รักเรียน</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <span class="text-slate-400 w-16">สาขา :</span>
-                            <span class="border-b border-slate-500 flex-1 text-slate-200 pb-0.5">เทคโนโลยีสารสนเทศ</span>
-                        </div>
-                    </div>
-                    <div class="space-y-3">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-slate-400 w-12">ห้อง :</span>
-                            <span class="border-b border-slate-500 flex-1 text-slate-200 pb-0.5">ปวช. 3/1</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <span class="text-slate-400 w-12">เลขที่ :</span>
-                            <span class="border-b border-slate-500 flex-1 text-slate-200 pb-0.5">15</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="max-w-6xl mx-auto text-center border-t border-[#4d2d1c] mt-8 pt-6 text-xs text-slate-400">
-            © 2026 ร้านเครื่องดื่มของฉัน | Student Project
+    <!-- Footer -->
+    <footer class="bg-gray-100 border-t border-gray-200 mt-auto">
+        <div class="max-w-5xl mx-auto px-4 py-4 text-center text-xs text-gray-500">
+            📌© 2026 Cloud & DevOps Basic Course. Built for Educational Purpose on GitHub.📌
         </div>
     </footer>
 
-    <!-- Clickable overlay area to capture comments anywhere on page -->
-    <div id="commentOverlayLayer" onclick="handlePageClick(event)" class="fixed inset-0 pointer-events-none z-30 hidden"></div>
-
-    <!-- Comments Sidebar Drawer -->
-    <div id="commentsDrawer" class="fixed right-0 top-0 h-full w-80 md:w-96 bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col border-l border-slate-200">
-        <div class="p-4 bg-[#3D2314] text-white flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-comments text-orange-400"></i>
-                <h3 class="font-bold">รายการคอมเมนต์จุดแก้ไขภาพ</h3>
-            </div>
-            <button onclick="toggleCommentMode()" class="text-slate-300 hover:text-white p-1">
-                <i class="fa-solid fa-xmark text-lg"></i>
-            </button>
-        </div>
-        <div class="p-4 bg-orange-50 text-xs text-orange-800 border-b border-orange-100">
-            คำแนะนำ: เปิดโหมดคอมเมนต์แล้ว <b>คลิกที่ตำแหน่งใดก็ได้บนหน้าจอเว็บ</b> เพื่อปักหมุดจุดที่ต้องการแก้ไขหรือให้ข้อเสนอแนะ
-        </div>
-        <div id="commentsList" class="flex-1 overflow-y-auto p-4 space-y-3">
-            <!-- Dynamic Comment Items go here -->
-            <div id="noCommentsMsg" class="text-center text-slate-400 py-10 text-sm">
-                ยังไม่มีการคอมเมนต์จุดแก้ไข<br>คลิกปุ่มเปิดโหมดแล้วจิ้มบนหน้าจอเพื่อเพิ่มคอมเมนต์
-            </div>
-        </div>
-        <div class="p-4 border-t border-slate-200 bg-slate-50 flex justify-between">
-            <button onclick="clearAllComments()" class="text-xs text-red-600 hover:underline flex items-center space-x-1">
-                <i class="fa-solid fa-trash"></i>
-                <span>ลบทั้งหมด</span>
-            </button>
-            <span id="commentDrawerCount" class="text-xs text-slate-500 font-medium">รวม 0 จุดแก้ไข</span>
-        </div>
-    </div>
-
-    <!-- Modal for adding comment text -->
-    <div id="addCommentModal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl space-y-4 animate-scaleUp">
-            <div class="flex justify-between items-center">
-                <h4 class="font-bold text-lg text-slate-800 flex items-center space-x-2">
-                    <i class="fa-solid fa-location-dot text-orange-600"></i>
-                    <span>เพิ่มข้อเสนอแนะ / จุดแก้ไขภาพ</span>
-                </h4>
-                <button onclick="closeAddCommentModal()" class="text-slate-400 hover:text-slate-600">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <p class="text-xs text-slate-500">ระบุรายละเอียดสิ่งที่ต้องการแก้ไขหรือปรับปรุงในตำแหน่งนี้</p>
-            <textarea id="commentTextInput" rows="4" class="w-full border border-slate-300 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="เช่น ปรับสีข้อความให้เข้มขึ้น, ขยายขนาดโลโก้, หรือเปลี่ยนฟอนต์..."></textarea>
-            <div class="flex justify-end space-x-2 pt-2">
-                <button onclick="closeAddCommentModal()" class="px-4 py-2 text-sm bg-slate-200 hover:bg-slate-300 text-slate-700 rounded-xl transition">ยกเลิก</button>
-                <button onclick="saveComment()" class="px-5 py-2 text-sm bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-xl shadow transition">บันทึกหมุด</button>
-            </div>
-        </div>
-    </div>
-
-    <div id="pdfModal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-4 md:p-8">
-        <div class="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden animate-scaleUp">
-            <!-- PDF Header Toolbar -->
-            <div class="bg-[#3D2314] text-white px-6 py-4 flex justify-between items-center border-b border-[#5a3420]">
-                <div class="flex items-center space-x-3">
-                    <div class="bg-red-600 text-white text-xs font-bold px-2.5 py-1 rounded">PDF</div>
-                    <div>
-                        <h4 id="pdfTitle" class="font-bold text-base md:text-lg leading-tight">เอกสารรีวิวเครื่องดื่ม</h4>
-                        <p id="pdfSubtitle" class="text-xs text-orange-200">รีวิวสูตรและสัดส่วนส่วนผสม</p>
-                    </div>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <button onclick="printPdfView()" class="bg-orange-600 hover:bg-orange-700 text-white text-xs px-3 py-1.5 rounded-lg transition flex items-center space-x-1 shadow">
-                        <i class="fa-solid fa-print"></i>
-                        <span class="hidden sm:inline">พิมพ์ / ดาวน์โหลด PDF</span>
-                    </button>
-                    <button onclick="closePdfModal()" class="text-slate-300 hover:text-white p-1 text-xl">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- PDF Viewer Body with Simulated Pages and Pin Points -->
-            <div class="flex-1 overflow-y-auto bg-slate-200 p-6 flex flex-col items-center relative" id="pdfContainer">
-                <div class="bg-white shadow-xl rounded-xl max-w-2xl w-full p-8 md:p-12 space-y-6 relative border border-slate-300 my-2">
-                    
-                    <!-- PDF Document Header -->
-                    <div class="flex justify-between items-center border-b pb-4">
-                        <div class="flex items-center space-x-2">
-                            <div class="w-8 h-8 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold text-sm">FD</div>
-                            <span class="font-bold text-sm text-slate-700">FRESH DRINK STANDARD REVIEW DOCUMENT</span>
-                        </div>
-                        <span class="text-xs text-slate-400">Ref: REV-2026-001</span>
-                    </div>
-
-                    <!-- PDF Content Section -->
-                    <div class="space-y-4">
-                        <h3 id="pdfDocHeading" class="text-2xl font-extrabold text-[#3D2314]">รายงานการตรวจสอบรสชาติและสูตรมาตรฐาน</h3>
-                        <p id="pdfDocDesc" class="text-sm text-slate-600 leading-relaxed">
-                            เอกสารฉบับนี้จัดทำขึ้นเพื่อแสดงรายละเอียดส่วนผสม อุณหภูมิการชง และขั้นตอนการควบคุมคุณภาพของเครื่องดื่มในร้าน โดยมีการปักหมุดจุดเปลี่ยนสำคัญ (Critical Control Points) ในกระบวนการชงและการให้บริการ
-                        </p>
-
-                        <!-- Interactive PDF Pins Container -->
-                        <div class="bg-amber-50 rounded-2xl p-6 border border-amber-200 space-y-4 relative">
-                            <h4 class="font-bold text-amber-900 text-sm flex items-center space-x-2">
-                                <i class="fa-solid fa-bookmark text-amber-600"></i>
-                                <span>จุดเปลี่ยนและข้อสังเกตสำคัญในกระบวนการผลิต (PDF Pinpoints)</span>
-                            </h4>
-                            
-                            <div class="space-y-3" id="pdfPinList">
-                                <!-- Pin Item 1 -->
-                                <div onclick="highlightPdfPin(1)" class="bg-white p-3 rounded-xl border border-amber-200 shadow-sm flex items-start space-x-3 cursor-pointer hover:bg-amber-100/50 transition">
-                                    <div class="bg-orange-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">1</div>
-                                    <div class="text-xs space-y-1">
-                                        <p class="font-bold text-slate-800">จุดที่ 1: อุณหภูมิการสกัดน้ำชา/กาแฟ</p>
-                                        <p class="text-slate-600">ต้องรักษาอุณหภูมิน้ำร้อนให้อยู่ในช่วง 90-95 องศาเซลเซียส เพื่อดึงรสชาติและกลิ่นหอมได้ดีที่สุด ไม่ควรใช้น้ำเดือดจัดเกินไป</p>
-                                    </div>
-                                </div>
-                                <!-- Pin Item 2 -->
-                                <div onclick="highlightPdfPin(2)" class="bg-white p-3 rounded-xl border border-amber-200 shadow-sm flex items-start space-x-3 cursor-pointer hover:bg-amber-100/50 transition">
-                                    <div class="bg-orange-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">2</div>
-                                    <div class="text-xs space-y-1">
-                                        <p class="font-bold text-slate-800">จุดที่ 2: สัดส่วนนมข้นหวานและนมสด</p>
-                                        <p class="text-slate-600">การปรับลดเพิ่มความหวานควรใช้วัดด้วยตวงมาตรฐาน ไม่ควรเติมตามใจชอบเพื่อให้รสชาติคงที่ทุกแก้ว</p>
-                                    </div>
-                                </div>
-                                <!-- Pin Item 3 -->
-                                <div onclick="highlightPdfPin(3)" class="bg-white p-3 rounded-xl border border-amber-200 shadow-sm flex items-start space-x-3 cursor-pointer hover:bg-amber-100/50 transition">
-                                    <div class="bg-orange-600 text-white font-bold w-6 h-6 rounded-full flex items-center justify-center text-xs flex-shrink-0 mt-0.5">3</div>
-                                    <div class="text-xs space-y-1">
-                                        <p class="font-bold text-slate-800">จุดที่ 3: การตกแต่งหน้าแก้วและการเสิร์ฟ</p>
-                                        <p class="text-slate-600">ตรวจสอบความสะอาดของขอบแก้วและซีลฝาก่อนส่งมอบให้ลูกค้า พร้อมแนบหลอดกระดาษรักษ์โลก</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Simulated PDF Graphic / Chart -->
-                        <div class="bg-slate-100 rounded-xl p-4 text-center text-xs text-slate-500 border border-slate-200">
-                            [ แผนผังจำลองขั้นตอนการควบคุมคุณภาพ / Quality Control Flowchart ]
-                        </div>
-                    </div>
-
-                    <!-- PDF Footer -->
-                    <div class="border-t pt-4 flex justify-between items-center text-xs text-slate-400">
-                        <span>หน้า 1 จาก 1</span>
-                        <span>ร้านเครื่องดื่มของฉัน (Fresh Drink)</span>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- PDF Modal Footer -->
-            <div class="bg-slate-100 px-6 py-3 border-t flex justify-end">
-                <button onclick="closePdfModal()" class="bg-slate-700 hover:bg-slate-800 text-white text-sm px-6 py-2 rounded-xl transition">
-                    ปิดหน้าต่างรีวิว
-                </button>
-            </div>
-        </div>
-    </div>
-
+    <!-- JavaScript สำหรับทดสอบระบบ -->
     <script>
-        let isCommentModeActive = false;
-        let comments = [];
-        let tempClickPosition = { x: 0, y: 0 };
+        function submitMessage() {
+            const name = document.getElementById('sender-name').value;
+            const message = document.getElementById('sender-message').value;
 
-        // Toggle Comment Mode
-        function toggleCommentMode() {
-            isCommentModeActive = !isCommentModeActive;
-            const btn = document.getElementById('toggleCommentMode');
-            const txt = document.getElementById('commentModeText');
-            const overlay = document.getElementById('commentOverlayLayer');
-            const drawer = document.getElementById('commentsDrawer');
-
-            if (isCommentModeActive) {
-                btn.classList.remove('bg-amber-600', 'hover:bg-amber-700');
-                btn.classList.add('bg-red-600', 'hover:bg-red-700', 'ring-4', 'ring-red-300');
-                txt.textContent = 'ปิดโหมดคอมเมนต์';
-                overlay.classList.remove('hidden');
-                overlay.style.pointerEvents = 'auto';
-                document.body.style.cursor = 'crosshair';
-                drawer.classList.remove('translate-x-full');
-            } else {
-                btn.classList.add('bg-amber-600', 'hover:bg-amber-700');
-                btn.classList.remove('bg-red-600', 'hover:bg-red-700', 'ring-4', 'ring-red-300');
-                txt.textContent = 'เปิดโหมดคอมเมนต์จุดแก้ไข';
-                overlay.classList.add('hidden');
-                overlay.style.pointerEvents = 'none';
-                document.body.style.cursor = 'default';
-                drawer.classList.add('translate-x-full');
-            }
-        }
-
-        function handlePageClick(event) {
-            if (!isCommentModeActive) return;
-
-            // Prevent clicking buttons from triggering comment prompt directly
-            if (event.target.tagName === 'BUTTON' || event.target.closest('button') || event.target.closest('#commentsDrawer')) {
+            if(!name || !message) {
+                alert('กรุณากรอกข้อมูลให้ครบถ้วน');
                 return;
             }
 
-            const x = event.clientX;
-            const y = event.clientY;
+            console.log("Form Submitted:", { name, message });
+            alert(`ขอบคุณครับคุณ ${name}! ระบบรับข้อความเรียบร้อยแล้ว`);
             
-            // Store position relative to viewport / scroll
-            tempClickPosition = {
-                x: x + window.scrollX,
-                y: y + window.scrollY,
-                viewX: event.clientX,
-                viewY: event.clientY
-            };
-
-            // Open modal to enter comment text
-            document.getElementById('commentTextInput').value = '';
-            document.getElementById('addCommentModal').classList.remove('hidden');
-        }
-
-        function closeAddCommentModal() {
-            document.getElementById('addCommentModal').classList.add('hidden');
-        }
-
-        function saveComment() {
-            const text = document.getElementById('commentTextInput').value.trim();
-            if (!text) {
-                alert('กรุณากรอกข้อความคอมเมนต์จุดแก้ไข');
-                return;
-            }
-
-            const newComment = {
-                id: Date.now(),
-                text: text,
-                x: tempClickPosition.x,
-                y: tempClickPosition.y,
-                viewX: tempClickPosition.viewX,
-                viewY: tempClickPosition.viewY,
-                date: new Date().toLocaleTimeString('th-TH', { hour: '2-digit', minute: '2-digit' })
-            };
-
-            comments.push(newComment);
-            closeAddCommentModal();
-            renderComments();
-        }
-
-        function renderComments() {
-            // Remove existing DOM pin markers
-            document.querySelectorAll('.dynamic-pin-marker').forEach(el => el.remove());
-
-            const listContainer = document.getElementById('commentsList');
-            const noMsg = document.getElementById('noCommentsMsg');
-            const badge = document.getElementById('commentCountBadge');
-            const drawerCount = document.getElementById('commentDrawerCount');
-
-            badge.textContent = comments.length;
-            drawerCount.textContent = `รวม ${comments.length} จุดแก้ไข`;
-
-            if (comments.length === 0) {
-                if (noMsg) noMsg.style.display = 'block';
-                listContainer.innerHTML = `<div id="noCommentsMsg" class="text-center text-slate-400 py-10 text-sm">ยังไม่มีการคอมเมนต์จุดแก้ไข<br>คลิกปุ่มเปิดโหมดแล้วจิ้มบนหน้าจอเพื่อเพิ่มคอมเมนต์</div>`;
-                return;
-            }
-
-            let htmlContent = '';
-            comments.forEach((c, index) => {
-                // Render visual pin on page body
-                const pinEl = document.createElement('div');
-                pinEl.className = 'absolute z-40 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold text-xs shadow-lg comment-pin cursor-pointer transform -translate-x-1/2 -translate-y-1/2 dynamic-pin-marker border-2 border-white';
-                pinEl.style.left = `${c.x}px`;
-                pinEl.style.top = `${c.y}px`;
-                pinEl.textContent = index + 1;
-                pinEl.title = c.text;
-                pinEl.onclick = () => focusComment(c.id);
-                document.body.appendChild(pinEl);
-
-                // Render in sidebar drawer
-                htmlContent += `
-                    <div class="bg-orange-50/70 border border-orange-200 rounded-2xl p-3 space-y-2 shadow-sm hover:bg-orange-100 transition">
-                        <div class="flex justify-between items-center">
-                            <span class="bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">จุดที่ ${index + 1}</span>
-                            <div class="flex items-center space-x-2">
-                                <span class="text-[10px] text-slate-400">${c.date}</span>
-                                <button onclick="deleteComment(${c.id})" class="text-slate-400 hover:text-red-600 text-xs">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text-xs text-slate-700 font-medium">${escapeHtml(c.text)}</p>
-                    </div>
-                `;
-            });
-
-            listContainer.innerHTML = htmlContent;
-        }
-
-        function deleteComment(id) {
-            comments = comments.filter(c => c.id !== id);
-            renderComments();
-        }
-
-        function clearAllComments() {
-            if (confirm('คุณต้องการลบจุดคอมเมนต์ทั้งหมดใช่หรือไม่?')) {
-                comments = [];
-                renderComments();
-            }
-        }
-
-        function focusComment(id) {
-            const comment = comments.find(c => c.id === id);
-            if (comment) {
-                window.scrollTo({ top: comment.y - 200, behavior: 'smooth' });
-            }
-        }
-
-        function escapeHtml(text) {
-            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
-            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
-        }
-
-        function openPdfViewer(menuName, description, pageType) {
-            document.getElementById('pdfTitle').textContent = `รีวิวและสูตรมาตรฐาน: ${menuName}`;
-            document.getElementById('pdfSubtitle').textContent = description;
-            document.getElementById('pdfDocHeading').textContent = `รายงานการตรวจสอบสูตร: ${menuName}`;
-            document.getElementById('pdfDocDesc').textContent = `เอกสารรีวิวฉบับนี้แสดงข้อมูลละเอียดของเมนู "${menuName}" ซึ่งผ่านการตรวจสอบมาตรฐานความอร่อยและสุขอนามัย พร้อมปักหมุดจุดเปลี่ยนสำคัญในการเตรียมวัตถุดิบ`;
-            
-            document.getElementById('pdfModal').classList.remove('hidden');
-        }
-
-        function closePdfModal() {
-            document.getElementById('pdfModal').classList.add('hidden');
-        }
-
-        function highlightPdfPin(pinNumber) {
-            alert(`คุณกำลังตรวจสอบหมุดจุดเปลี่ยน (PDF Pinpoint) ที่ ${pinNumber} ในเอกสารรีวิวนี้ ซึ่งเป็นจุดสำคัญในการควบคุมคุณภาพของเครื่องดื่ม`);
-        }
-
-        function printPdfView() {
-            window.print();
+            document.getElementById('sender-name').value = '';
+            document.getElementById('sender-message').value = '';
         }
     </script>
 </body>
