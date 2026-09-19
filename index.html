@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ร้านเสื้อผ้าของฉัน - Fashion Shop</title>
+    <title>ร้านเครื่องดื่มของฉัน - Fresh Drink</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -355,33 +355,34 @@
 </head>
 <body>
 
-    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Navbar] แนะนำให้เพิ่มไอคอนค้นหาและตะกร้าสินค้าทางขวาเพื่อให้เว็บไซต์ดูสมบูรณ์และใช้งานได้จริงมากยิ่งขึ้น -->
+    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Navbar] แนะนำให้จัดระยะห่างโลโก้และเมนูนำทางให้สมดุล พร้อมทั้งเพิ่มไอคอนตะกร้าสินค้า -->
     <!-- Navbar -->
     <nav>
         <div class="logo-area">
-            <div class="logo-icon">👕</div>
+            <div class="logo-icon">🥤</div>
             <div class="logo-text">
-                <h1>ร้านเสื้อผ้าของฉัน</h1>
-                <span>My Fashion Shop</span>
+                <h1>ร้านเครื่องดื่มของฉัน</h1>
+                <span>Fresh Drink</span>
             </div>
         </div>
         <ul class="nav-links">
-            <li><a href="#" class="active">สินค้าแนะนำ</a></li>
-            <li><a href="#">สินค้าทั้งหมด</a></li>
+            <li><a href="#" class="active">เมนูแนะนำ</a></li>
+            <li><a href="#">เมนูเพิ่มเติม</a></li>
             <li><a href="#">โปรโมชั่น</a></li>
         </ul>
     </nav>
 
-    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Hero Section] ควรปรับขนาดฟอนต์หัวข้อให้ยืดหยุ่นขึ้นในหน้าจอขนาดเล็ก (Mobile Responsive) และเพิ่มปุ่มรองรับการเลื่อนดูสินค้าอัตโนมัติ -->
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h2>ดูดีทุกสไตล์<br>กับเสื้อผ้าของเรา</h2>
-            <p>เสื้อผ้าคุณภาพ ราคานักเรียน</p>
-            <button class="btn-primary">ดูสินค้า</button>
+            <h2>สดชื่นทุกแก้ว<br>กับเครื่องดื่มของเรา</h2>
+            <p>เครื่องดื่มคุณภาพ ราคานักเรียน</p>
+            <button class="btn-primary">ดูเมนู</button>
         </div>
         <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=600" alt="Fashion collection">
+             <!-- 📌จุดแก้ไขภาพ https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600 >
+            
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600" alt="Fresh drinks collection">
         </div>
     </section>
 
@@ -390,29 +391,28 @@
         <!-- Section 1 -->
         <div class="section-box">
             <div class="section-header">
-                <h3>สินค้าแนะนำ</h3>
-                <p>สินค้ายอดนิยมของร้าน</p>
+                <h3>เมนูแนะนำ</h3>
+                <p>เมนูยอดนิยมของร้าน</p>
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=300" alt="เสื้อยืดมินิมอล">
-                    <h4>เสื้อยืดมินิมอล</h4>
-                    <p class="desc">ผ้านุ่ม ใส่สบาย ระบายอากาศดี</p>
+                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=300" alt="ชาไทยนมสด">
+                    <h4>ชาไทยนมสด</h4>
+                    <p class="desc">หวาน หอม กลมกล่อม</p>
                     <div class="product-footer">
-                        <span class="price">฿190</span>
-                        <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: ปุ่มกดรีวิว PDF] เปลี่ยนจากการเปิดหน้าเปล่าเป็นการเรียกฟังก์ชันเปิด Modal แสดงเอกสาร PDF รีวิวสินค้า -->
-                        <button class="btn-sm" onclick="openPdfModal('เสื้อยืดมินิมอล', '฿190', 'รีวิวระดับ 5 ดาวจากลูกค้าจริง: เนื้อผ้าดีมาก ใส่สบาย ไม่ร้อน ซักแล้วไม่ย้วย')">เปิดดูรีวิว</button>
+                        <span class="price">฿40</span>
+                        <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: ปุ่มกดรีวิว PDF] เพิ่มฟังก์ชันคลิกเพื่อเปิดหน้าต่างจำลองการดูไฟล์ PDF รีวิวสินค้า -->
+                        <button class="btn-sm" onclick="openPdfModal('ชาไทยนมสด', '฿40', 'รีวิวระดับ 5 ดาว: ชาไทยเข้มข้น หอมกลิ่นชาแท้ หวานน้อยกำลังดี')">เปิดดูรีวิว</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <!-- 📌 [จุดปักหมุดที่ 2: เปลี่ยนรูปภาพแบนเนอร์หลัก] -->
-                    <!-- ใส่ชื่อไฟล์รูป เช่น "images/hero-banner.jpg" หรือ URL รูปภาพ แทนที่ -->
-                    <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=300" alt="เดรสเกาหลี">
-                    <h4>เดรสเกาหลีหวานๆ</h4>
-                    <p class="desc">ทรงสวย ทรงเป๊ะ หวานละมุน</p>
+                    <!-- 📌 [จุดปักหมุดที่ 2: เปลี่ยนรูปภาพสินค้า] สามารถเปลี่ยนลิงก์ภาพหรือชื่อไฟล์รูปภาพมัทฉะได้ตามต้องการ -->
+                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=300" alt="มัทฉะนมสด">
+                    <h4>มัทฉะนมสด</h4>
+                    <p class="desc">ชาเขียวแท้ หอมละมุน</p>
                     <div class="product-footer">
-                        <span class="price">฿350</span>
-                        <button class="btn-sm" onclick="openPdfModal('เดรสเกาหลีหวานๆ', '฿350', 'รีวิวระดับ 4.8 ดาว: ดีไซน์สวยตรงปก ผ้ามีความพริ้วไหว เหมาะกับใส่ไปคาเฟ่')">เปิดดูรีวิว</button>
+                        <span class="price">฿45</span>
+                        <button class="btn-sm" onclick="openPdfModal('มัทฉะนมสด', '฿45', 'รีวิวระดับ 4.9 ดาว: มัทฉะพรีเมียม ไม่ขมคอ นมสดนุ่มละมุนเข้ากันได้ดี')">เปิดดูรีวิว</button>
                     </div>
                 </div>
             </div>
@@ -421,43 +421,43 @@
         <!-- Section 2 -->
         <div class="section-box highlight">
             <div class="section-header">
-                <h3>สินค้าเพิ่มเติม</h3>
-                <p>อีก 2 สไตล์ที่น่าสนใจ</p>
+                <h3>เมนูแนะนำเพิ่มเติม</h3>
+                <p>อีก 2 เมนูที่น่าสนใจ</p>
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?w=300" alt="แจ็คเก็ตยีนส์">
-                    <h4>แจ็คเก็ตยีนส์เท่ๆ</h4>
-                    <p class="desc">ยีนส์เนื้อดี เท่ได้ทุกวัน</p>
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300" alt="โกโก้นมสด">
+                    <h4>โกโก้นมสด</h4>
+                    <p class="desc">โกโก้เข้มข้น หอมมัน</p>
                     <div class="product-footer">
-                        <span class="price">฿450</span>
-                        <button class="btn-sm" onclick="openPdfModal('แจ็คเก็ตยีนส์เท่ๆ', '฿450', 'รีวิวระดับ 4.9 ดาว: ยีนส์หนานุ่มกำลังดี คัทติ้งเนียบ ใส่คลุมแล้วดูเท่มาก')">เปิดดูรีวิว</button>
+                        <span class="price">฿45</span>
+                        <button class="btn-sm" onclick="openPdfModal('โกโก้นมสด', '฿45', 'รีวิวระดับ 4.8 ดาว: สายดาร์กช็อกโกแลตต้องลอง เข้มข้นสะใจ')">เปิดดูรีวิว</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=300" alt="กางเกงสแล็ค">
-                    <h4>กางเกงขายาวสตรีท</h4>
-                    <p class="desc">นุ่ม ใส่สบาย เข้ารูปกำลังดี</p>
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=300" alt="กาแฟลาเต้">
+                    <h4>กาแฟลาเต้</h4>
+                    <p class="desc">นุ่ม หอม เข้มกำลังดี</p>
                     <div class="product-footer">
-                        <span class="price">฿290</span>
-                        <button class="btn-sm" onclick="openPdfModal('กางเกงขายาวสตรีท', '฿290', 'รีวิวระดับ 4.7 ดาว: ทรงสวยเข้ารูป ขยับตัวสะดวก ไม่อึดอัด')">เปิดดูรีวิว</button>
+                        <span class="price">฿50</span>
+                        <button class="btn-sm" onclick="openPdfModal('กาแฟลาเต้', '฿50', 'รีวิวระดับ 4.7 ดาว: กาแฟหอมกรุ่นตื่นตัวยามเช้า นมละมุนกลมกล่อม')">เปิดดูรีวิว</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: โปรโมชั่นแบนเนอร์] เพิ่มปุ่มกดรับสิทธิ์ หรือลิงก์รายละเอียดโปรโมชั่นเพิ่มเติมเพื่อกระตุ้นยอดขาย -->
+    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: โปรโมชั่นแบนเนอร์] ควรจัดตำแหน่งป้ายส่วนลดให้โดดเด่นและอ่านง่ายยิ่งขึ้นบนมือถือ -->
     <!-- Promo Banner -->
     <div class="promo-banner">
         <div class="promo-text">
             <h3>โปรโมชั่นพิเศษ!</h3>
-            <p>ซื้อ 2 ชิ้น ลดทันที 50 บาท</p>
+            <p>ซื้อ 2 แก้ว ลดทันที 10 บาท</p>
             <small style="color:#666;">ตั้งแต่วันนี้ - 31 ธันวาคม 2026</small>
         </div>
         <div class="badge-discount">
             ลดทันที
-            <span>50฿</span>
+            <span>10฿</span>
         </div>
     </div>
 
@@ -465,10 +465,10 @@
     <footer>
         <div class="footer-content">
             <div class="logo-area">
-                <div class="logo-icon">👕</div>
+                <div class="logo-icon">🥤</div>
                 <div class="logo-text">
-                    <h1>ร้านเสื้อผ้าของฉัน</h1>
-                    <span>ดูดีทุกสไตล์ กับเสื้อผ้าคุณภาพ</span>
+                    <h1>ร้านเครื่องดื่มของฉัน</h1>
+                    <span>สดชื่นทุกแก้ว กับเครื่องดื่มคุณภาพ</span>
                 </div>
             </div>
             <div class="footer-info">
@@ -481,7 +481,7 @@
             </div>
         </div>
         <div class="copyright">
-            © 2026 ร้านเสื้อผ้าของฉัน | Student Project
+            © 2026 ร้านเครื่องดื่มของฉัน | Student Project
         </div>
     </footer>
 
@@ -489,7 +489,7 @@
     <div id="pdfModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="pdfTitle">รายงานสรุปผลรีวิวสินค้า (PDF Viewer)</h3>
+                <h3 id="pdfTitle">รายงานสรุปผลรีวิวเครื่องดื่ม (PDF Viewer)</h3>
                 <button class="close-btn" onclick="closePdfModal()">&times;</button>
             </div>
             <div class="modal-body">
@@ -498,9 +498,9 @@
                     <p id="pdfProductPrice" style="font-weight: bold; color: #e66822; margin-bottom: 10px;"></p>
                     <p id="pdfReviewContent" style="margin-bottom: 15px; line-height: 1.6;"></p>
                     
-                    <!-- 📌 [คอมเม้นต์จุดเปลี่ยนไฟล์ PDF]: จุดที่ควรปรับปรุงในเอกสาร PDF เช่น เพิ่มตารางสถิติยอดขายรายเดือน, เพิ่มภาพถ่ายจริงจากลูกค้า (User-generated content), และกราฟเปรียบเทียบความพึงพอใจ -->
+                    <!-- 📌 [คอมเม้นต์จุดเปลี่ยนไฟล์ PDF]: จุดที่ควรปรับปรุงในเอกสาร PDF เช่น เพิ่มตารางสรุปยอดขายเครื่องดื่มแต่ละประเภท, สถิติช่วงเวลาขายดี, และกราฟวงกลมแสดงความพึงพอใจของลูกค้า -->
                     <div class="pdf-comment-box">
-                        <strong>📌 คอมเม้นต์จุดเปลี่ยนไฟล์ PDF:</strong> ควรเพิ่มหน้าตารางสรุปยอดขายรายเดือนและกราฟแท่งแสดงอัตราความพึงพอใจของลูกค้าในไฟล์ PDF ฉบับจริง เพื่อให้เอกสารมีความน่าเชื่อถือและนำไปใช้ประกอบการประเมินโครงการได้สมบูรณ์ยิ่งขึ้น
+                        <strong>📌 คอมเม้นต์จุดเปลี่ยนไฟล์ PDF:</strong> ควรเพิ่มหน้าตารางสรุปยอดขายแยกตามประเภทเครื่องดื่ม และกราฟแสดงช่วงเวลาที่ลูกค้ามาใช้บริการมากที่สุดในไฟล์ PDF ฉบับจริง เพื่อให้ข้อมูลเชิงวิเคราะห์มีความครบถ้วนและเป็นประโยชน์ต่อการนำเสนอโครงงานมากยิ่งขึ้น
                     </div>
                 </div>
             </div>
@@ -509,7 +509,7 @@
 
     <script>
         function openPdfModal(productName, price, review) {
-            document.getElementById('pdfProductName').innerText = "สินค้า: " + productName;
+            document.getElementById('pdfProductName').innerText = "เมนู: " + productName;
             document.getElementById('pdfProductPrice').innerText = "ราคา: " + price;
             document.getElementById('pdfReviewContent').innerText = review;
             document.getElementById('pdfModal').style.display = 'flex';
