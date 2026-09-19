@@ -17,8 +17,14 @@
     <header class="bg-[#3d2514] text-white shadow-md">
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
+                <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
                 <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center overflow-hidden border border-amber-300">
-                    <span class="text-xs font-bold text-amber-800">Logo</span>
+                    <img id="logo-img"
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                         src="./assets/images/logo.png" 
+                         alt="โลโก้ร้าน" 
+                         onerror="this.src='https://via.placeholder.com/40?text=Logo';"
+                         class="w-full h-full object-cover">
                 </div>
                 <div>
                     <h1 class="text-lg font-bold">ร้านเครื่องดื่มของฉัน</h1>
@@ -51,8 +57,10 @@
                     </button>
                 </div>
                 <div class="flex gap-4">
-                    <div class="w-32 h-44 bg-amber-600 rounded-2xl shadow-lg flex items-center justify-center text-white font-bold">ชาไทย</div>
-                    <div class="w-32 h-44 bg-emerald-700 rounded-2xl shadow-lg flex items-center justify-center text-white font-bold">มัทฉะ</div>
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                    <img src="./assets/images/hero-drink-1.png" alt="ชาไทย" onerror="this.src='https://via.placeholder.com/128x176?text=Drink+1';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                    <img src="./assets/images/hero-drink-2.png" alt="มัทฉะ" onerror="this.src='https://via.placeholder.com/128x176?text=Drink+2';" class="w-32 h-44 object-cover rounded-2xl shadow-lg">
                 </div>
             </div>
         </section>
@@ -69,26 +77,30 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Card 1 -->
                     <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
-                        <div class="w-24 h-28 bg-amber-500 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปชาไทย</div>
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                        <img src="./assets/images/thai-tea.png" alt="ชาไทยนมสด" onerror="this.src='https://via.placeholder.com/96x112?text=Thai+Tea';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
                         <div class="flex-grow space-y-1">
                             <h3 class="font-bold text-gray-800">ชาไทยนมสด</h3>
                             <p class="text-xs text-gray-500">หวาน หอม กลมกล่อม</p>
                             <div class="flex justify-between items-center pt-2">
                                 <span class="text-amber-700 font-bold">฿40</span>
-                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                                <a href="./assets/docs/topology.pdf" target="_blank" class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
                     <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
-                        <div class="w-24 h-28 bg-emerald-600 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปมัทฉะ</div>
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                        <img src="./assets/images/matcha.png" alt="มัทฉะนมสด" onerror="this.src='https://via.placeholder.com/96x112?text=Matcha';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
                         <div class="flex-grow space-y-1">
                             <h3 class="font-bold text-gray-800">มัทฉะนมสด</h3>
                             <p class="text-xs text-gray-500">ชาเขียวแท้ หอมละมุน</p>
                             <div class="flex justify-between items-center pt-2">
                                 <span class="text-amber-700 font-bold">฿45</span>
-                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                                <a href="./assets/docs/topology.pdf" target="_blank" class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
                             </div>
                         </div>
                     </div>
@@ -105,26 +117,30 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Card 3 -->
                     <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
-                        <div class="w-24 h-28 bg-amber-800 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปโกโก้</div>
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                        <img src="./assets/images/cocoa.png" alt="โกโก้นมสด" onerror="this.src='https://via.placeholder.com/96x112?text=Cocoa';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
                         <div class="flex-grow space-y-1">
                             <h3 class="font-bold text-gray-800">โกโก้นมสด</h3>
                             <p class="text-xs text-gray-500">โกโก้เข้มข้น หอมมัน</p>
                             <div class="flex justify-between items-center pt-2">
                                 <span class="text-amber-700 font-bold">฿45</span>
-                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                                <a href="./assets/docs/topology.pdf" target="_blank" class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
-                        <div class="w-24 h-28 bg-yellow-700 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปกาแฟ</div>
+                        <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                        <img src="./assets/images/latte.png" alt="กาแฟลาเต้" onerror="this.src='https://via.placeholder.com/96x112?text=Latte';" class="w-24 h-28 object-cover rounded-xl flex-shrink-0">
                         <div class="flex-grow space-y-1">
                             <h3 class="font-bold text-gray-800">กาแฟลาเต้</h3>
                             <p class="text-xs text-gray-500">นุ่ม หอม เข้มกำลังดี</p>
                             <div class="flex justify-between items-center pt-2">
                                 <span class="text-amber-700 font-bold">฿50</span>
-                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                                <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
+                                <a href="./assets/docs/topology.pdf" target="_blank" class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูไฟล์</a>
                             </div>
                         </div>
                     </div>
@@ -146,7 +162,10 @@
         <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
             <div class="space-y-2">
                 <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center text-xs font-bold text-amber-800">Logo</div>
+                    <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
+                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center text-xs font-bold text-amber-800 overflow-hidden">
+                        <img src="./assets/images/logo.png" alt="โลโก้" onerror="this.src='https://via.placeholder.com/32?text=Logo';" class="w-full h-full object-cover">
+                    </div>
                     <h3 class="font-bold">ร้านเครื่องดื่มของฉัน</h3>
                 </div>
                 <p class="text-xs text-amber-200">Fresh Drink</p>
