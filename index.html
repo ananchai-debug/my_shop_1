@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ร้านเครื่องดื่มของฉัน - Fresh Drink</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -14,276 +14,315 @@
         }
 
         body {
-            background-color: #fcf8f5;
-            color: #333;
+            background-color: #ffffff;
+            color: #2b1b17;
         }
 
         /* Navbar */
         nav {
-            background-color: #2b1b17;
+            background-color: #3b2317;
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 80px;
+            padding: 15px 80px;
         }
 
         .logo-area {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
         .logo-icon {
-            width: 45px;
-            height: 45px;
+            width: 55px;
+            height: 55px;
             background-color: #f7d6c8;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
+            font-size: 28px;
+            border: 2px solid #e66822;
         }
 
         .logo-text h1 {
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 600;
         }
 
         .logo-text span {
-            font-size: 12px;
-            color: #ccc;
+            font-size: 13px;
+            color: #ddd;
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 40px;
             list-style: none;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            font-size: 15px;
+            font-size: 16px;
+            font-weight: 400;
         }
 
         .nav-links a.active {
-            color: #e66822;
-            border-bottom: 2px solid #e66822;
+            color: #ff8c42;
+            border-bottom: 2px solid #ff8c42;
             padding-bottom: 4px;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(to right, #f7ebe1 50%, #eae0d5 50%);
+            background: linear-gradient(to right, #f4e8df 50%, #eae0d5 50%);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 100px;
-            min-height: 320px;
+            padding: 50px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-text {
+            max-width: 500px;
         }
 
         .hero-text h2 {
-            font-size: 38px;
+            font-size: 46px;
             color: #2b1b17;
             line-height: 1.2;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-weight: 600;
         }
 
         .hero-text p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 16px;
+            color: #555;
+            margin-bottom: 24px;
+            font-size: 18px;
         }
 
         .btn-primary {
             background-color: #e66822;
             color: white;
             border: none;
-            padding: 10px 30px;
-            border-radius: 20px;
+            padding: 12px 36px;
+            border-radius: 25px;
             font-size: 16px;
+            font-weight: 500;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(230, 104, 34, 0.3);
+        }
+
+        .hero-img {
+            display: flex;
+            gap: 15px;
+            align-items: center;
         }
 
         .hero-img img {
-            max-width: 420px;
+            width: 480px;
             border-radius: 12px;
+            object-fit: cover;
         }
 
-        /* Main Content Grid */
+        /* Main Content Container */
         .container {
             max-width: 1200px;
-            margin: 30px auto;
+            margin: 40px auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 25px;
             padding: 0 20px;
         }
 
         .section-box {
-            background-color: white;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border: 1px solid #f0f0f0;
         }
 
         .section-box.highlight {
-            background-color: #fdeeeedb;
+            background-color: #fdf2f4;
+            border: 1px solid #fce4e8;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .section-header h3 {
-            font-size: 20px;
+            font-size: 22px;
             color: #2b1b17;
+            font-weight: 600;
         }
 
         .section-header p {
-            font-size: 13px;
-            color: #888;
+            font-size: 14px;
+            color: #777;
+            margin-top: 4px;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            gap: 18px;
         }
 
         .product-card {
             background: white;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
-            border: 1px solid #eee;
+            border: 1px solid #eaeaea;
             text-align: center;
-            padding-bottom: 12px;
+            padding-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
         }
 
         .product-card img {
             width: 100%;
-            height: 160px;
+            height: 170px;
             object-fit: cover;
         }
 
         .product-card h4 {
-            font-size: 15px;
-            margin-top: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+            font-weight: 600;
+            color: #2b1b17;
         }
 
         .product-card .desc {
-            font-size: 12px;
-            color: #777;
-            margin: 4px 0;
+            font-size: 13px;
+            color: #666;
+            margin: 4px 0 12px 0;
         }
 
         .product-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 12px;
-            margin-top: 8px;
+            padding: 0 15px;
         }
 
         .price {
             font-weight: 600;
             color: #2b1b17;
+            font-size: 18px;
         }
 
         .btn-sm {
             background-color: #e66822;
             color: white;
             border: none;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
+            padding: 6px 16px;
+            border-radius: 16px;
+            font-size: 13px;
+            font-weight: 500;
             cursor: pointer;
+            transition: background 0.2s;
         }
 
         .btn-sm:hover {
             background-color: #cf5618;
         }
 
-        /* Banner */
+        /* Promo Banner */
         .promo-banner {
             max-width: 1160px;
-            margin: 20px auto;
-            background: linear-gradient(to right, #ffccd5, #ffb3c1);
-            border-radius: 16px;
-            padding: 20px 40px;
+            margin: 30px auto;
+            background: linear-gradient(135deg, #ffccd5, #ffb3c1);
+            border-radius: 20px;
+            padding: 25px 50px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 15px rgba(217, 4, 41, 0.1);
         }
 
         .promo-text h3 {
             color: #d90429;
-            font-size: 28px;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 4px;
         }
 
         .promo-text p {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
             color: #2b1b17;
+        }
+
+        .promo-text small {
+            font-size: 13px;
+            color: #555;
         }
 
         .badge-discount {
             background-color: #d90429;
             color: white;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 95px;
+            height: 95px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             font-weight: 600;
-            font-size: 12px;
+            font-size: 13px;
+            box-shadow: 0 4px 10px rgba(217, 4, 41, 0.3);
         }
 
         .badge-discount span {
-            font-size: 20px;
-            line-height: 1;
+            font-size: 24px;
+            line-height: 1.1;
+            font-weight: 700;
         }
 
         /* Footer */
         footer {
-            background-color: #2b1b17;
+            background-color: #3b2317;
             color: white;
-            padding: 30px 100px 15px 100px;
-            margin-top: 40px;
+            padding: 40px 80px 20px 80px;
+            margin-top: 50px;
         }
 
         .footer-content {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
 
         .footer-info form {
             display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 8px;
-            font-size: 14px;
+            grid-template-columns: 80px 240px 80px 240px;
+            gap: 15px 20px;
+            font-size: 15px;
+            align-items: center;
         }
 
         .footer-info input {
             background: transparent;
             border: none;
-            border-bottom: 1px solid #777;
+            border-bottom: 1px solid #aaa;
             color: white;
             outline: none;
+            padding-bottom: 4px;
+            font-size: 15px;
         }
 
         .copyright {
             text-align: center;
-            font-size: 12px;
-            color: #aaa;
-            border-top: 1px solid #444;
-            padding-top: 15px;
+            font-size: 13px;
+            color: #ccc;
+            border-top: 1px solid #553c30;
+            padding-top: 20px;
         }
 
         /* Modal สำหรับเปิดดูรีวิว PDF */
@@ -302,19 +341,19 @@
 
         .modal-content {
             background: white;
-            width: 800px;
+            width: 850px;
             max-width: 90%;
-            border-radius: 12px;
+            border-radius: 16px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
         .modal-header {
-            background: #2b1b17;
+            background: #3b2317;
             color: white;
-            padding: 15px 20px;
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -324,38 +363,38 @@
             background: none;
             border: none;
             color: white;
-            font-size: 22px;
+            font-size: 26px;
             cursor: pointer;
         }
 
         .modal-body {
-            padding: 20px;
-            max-height: 70vh;
+            padding: 25px;
+            max-height: 75vh;
             overflow-y: auto;
         }
 
         .pdf-viewer-sim {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            background: #f9f9f9;
-            min-height: 350px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            background: #fafafa;
         }
 
         .pdf-comment-box {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 10px 15px;
-            margin-top: 15px;
-            font-size: 13px;
-            color: #856404;
-            border-radius: 4px;
+            background: #fff8e1;
+            border-left: 4px solid #ffb300;
+            padding: 12px 18px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #795548;
+            border-radius: 6px;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Navbar] แนะนำให้จัดระยะห่างโลโก้และเมนูนำทางให้สมดุล พร้อมทั้งเพิ่มไอคอนตะกร้าสินค้า -->
+    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Navbar] จัดระยะห่างไอคอนโลโก้กับชื่อร้านให้สมดุล พร้อมปรับฟอนต์เมนูด้านขวาให้เด่นชัด -->
     <!-- Navbar -->
     <nav>
         <div class="logo-area">
@@ -372,7 +411,7 @@
         </ul>
     </nav>
 
-    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Hero Section] ควรปรับขนาดตัวอักษรหัวข้อให้รองรับหน้าจอทุกขนาด และเพิ่มความคมชัดของภาพประกอบด้านขวา -->
+    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: Hero Section] ปรับขนาดตัวอักษรหัวข้อ "สดชื่นทุกแก้วกับเครื่องดื่มของเรา" ให้สะดุดตา และจัดวางรูปภาพแก้วเครื่องดื่มคู่ให้อยู่กึ่งกลางพอดี -->
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
@@ -381,13 +420,13 @@
             <button class="btn-primary">ดูเมนู</button>
         </div>
         <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=600" alt="Fresh drinks collection">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800" alt="Fresh drinks collection">
         </div>
     </section>
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Section 1 -->
+        <!-- Section 1: เมนูแนะนำ -->
         <div class="section-box">
             <div class="section-header">
                 <h3>เมนูแนะนำ</h3>
@@ -395,29 +434,29 @@
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=300" alt="ชาไทยนมสด">
+                    <img src="https://images.unsplash.com/photo-1541658016709-82535e94bc69?w=400" alt="ชาไทยนมสด">
                     <h4>ชาไทยนมสด</h4>
                     <p class="desc">หวาน หอม กลมกล่อม</p>
                     <div class="product-footer">
                         <span class="price">฿40</span>
-                        <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: ปุ่มกดรีวิว PDF] เพิ่มฟังก์ชันคลิกเพื่อเปิดหน้าต่างจำลองการดูไฟล์ PDF รีวิวสินค้า -->
-                        <button class="btn-sm" onclick="openPdfModal('ชาไทยนมสด', '฿40', 'รีวิวระดับ 5 ดาว: ชาไทยเข้มข้น หอมกลิ่นชาแท้ หวานน้อยกำลังดี')">เปิดดูรีวิว</button>
+                        <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: ปุ่มกดดูรีวิว PDF] เพิ่มปุ่มเปิดดูรีวิวที่เชื่อมโยงกับฟังก์ชันแสดงเอกสาร PDF สรุปผลรีวิว -->
+                        <button class="btn-sm" onclick="openPdfModal('ชาไทยนมสด', '฿40', 'รีวิวระดับ 5 ดาว: ชาไทยเข้มข้น หอมกลิ่นชาแท้ หวานน้อยกลมกล่อมลงตัว ลูกค้าซื้อซ้ำมากที่สุด')">เปิดดูรีวิว</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <!-- 📌 [จุดปักหมุดที่ 2: เปลี่ยนรูปภาพสินค้า] สามารถเปลี่ยนลิงก์ภาพหรือชื่อไฟล์รูปภาพมัทฉะได้ตามต้องการ -->
-                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=300" alt="มัทฉะนมสด">
+                    <!-- 📌 [จุดปักหมุดที่ 2: รูปภาพเมนูมัทฉะนมสด] สามารถปรับเปลี่ยนลิงก์ภาพถ่ายจริงของร้านได้ตามต้องการ -->
+                    <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=400" alt="มัทฉะนมสด">
                     <h4>มัทฉะนมสด</h4>
                     <p class="desc">ชาเขียวแท้ หอมละมุน</p>
                     <div class="product-footer">
                         <span class="price">฿45</span>
-                        <button class="btn-sm" onclick="openPdfModal('มัทฉะนมสด', '฿45', 'รีวิวระดับ 4.9 ดาว: มัทฉะพรีเมียม ไม่ขมคอ นมสดนุ่มละมุนเข้ากันได้ดี')">เปิดดูรีวิว</button>
+                        <button class="btn-sm" onclick="openPdfModal('มัทฉะนมสด', '฿45', 'รีวิวระดับ 4.9 ดาว: มัทฉะพรีเมียมนำเข้า ไม่ขมคอ นมสดนุ่มละมุนเข้ากันได้ดีเยี่ยม')">เปิดดูรีวิว</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Section 2 -->
+        <!-- Section 2: เมนูแนะนำเพิ่มเติม -->
         <div class="section-box highlight">
             <div class="section-header">
                 <h3>เมนูแนะนำเพิ่มเติม</h3>
@@ -425,34 +464,34 @@
             </div>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=300" alt="โกโก้นมสด">
+                    <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400" alt="โกโก้นมสด">
                     <h4>โกโก้นมสด</h4>
                     <p class="desc">โกโก้เข้มข้น หอมมัน</p>
                     <div class="product-footer">
                         <span class="price">฿45</span>
-                        <button class="btn-sm" onclick="openPdfModal('โกโก้นมสด', '฿45', 'รีวิวระดับ 4.8 ดาว: สายดาร์กช็อกโกแลตต้องลอง เข้มข้นสะใจ')">เปิดดูรีวิว</button>
+                        <button class="btn-sm" onclick="openPdfModal('โกโก้นมสด', '฿45', 'รีวิวระดับ 4.8 ดาว: โกโก้เข้มข้นสะใจ สายดาร์กช็อกโกแลตต้องไม่พลาด หอมมันกลมกล่อม')">เปิดดูรีวิว</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=300" alt="กาแฟลาเต้">
+                    <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=400" alt="กาแฟลาเต้">
                     <h4>กาแฟลาเต้</h4>
                     <p class="desc">นุ่ม หอม เข้มกำลังดี</p>
                     <div class="product-footer">
                         <span class="price">฿50</span>
-                        <button class="btn-sm" onclick="openPdfModal('กาแฟลาเต้', '฿50', 'รีวิวระดับ 4.7 ดาว: กาแฟหอมกรุ่นตื่นตัวยามเช้า นมละมุนกลมกล่อม')">เปิดดูรีวิว</button>
+                        <button class="btn-sm" onclick="openPdfModal('กาแฟลาเต้', '฿50', 'รีวิวระดับ 4.7 ดาว: เอสเพรสโซ่ช็อตเข้มข้นผสานนมสดนุ่มละมุน หอมกรุ่นตื่นตัวยามเช้า')">เปิดดูรีวิว</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: โปรโมชั่นแบนเนอร์] ควรจัดตำแหน่งป้ายส่วนลดให้โดดเด่นและอ่านง่ายยิ่งขึ้นบนมือถือ -->
+    <!-- 📌 [คอมเม้นต์จุดแก้ไขภาพ: โปรโมชั่นแบนเนอร์] ปรับแต่งโทนสีชมพูพาสเทลและขนาดป้ายวงกลมลด 10 บาทให้โดดเด่นสะดุดตา -->
     <!-- Promo Banner -->
     <div class="promo-banner">
         <div class="promo-text">
             <h3>โปรโมชั่นพิเศษ!</h3>
             <p>ซื้อ 2 แก้ว ลดทันที 10 บาท</p>
-            <small style="color:#666;">ตั้งแต่วันนี้ - 31 ธันวาคม 2026</small>
+            <small>ตั้งแต่วันนี้ - 31 ธันวาคม 2569</small>
         </div>
         <div class="badge-discount">
             ลดทันที
@@ -484,22 +523,22 @@
         </div>
     </footer>
 
-    <!-- Modal สำหรับเปิดไฟล์ PDF รีวิว -->
+    <!-- Modal สำหรับเปิดดูรีวิว PDF -->
     <div id="pdfModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <h3 id="pdfTitle">รายงานสรุปผลรีวิวเครื่องดื่ม (PDF Viewer)</h3>
+                <h3 id="pdfTitle">รายงานสรุปผลรีวิวและยอดขาย (PDF Viewer)</h3>
                 <button class="close-btn" onclick="closePdfModal()">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="pdf-viewer-sim">
-                    <h4 id="pdfProductName" style="color: #2b1b17; margin-bottom: 10px;">ชื่อสินค้า</h4>
-                    <p id="pdfProductPrice" style="font-weight: bold; color: #e66822; margin-bottom: 10px;"></p>
-                    <p id="pdfReviewContent" style="margin-bottom: 15px; line-height: 1.6;"></p>
+                    <h4 id="pdfProductName" style="color: #3b2317; font-size: 20px; margin-bottom: 8px;">ชื่อเมนู</h4>
+                    <p id="pdfProductPrice" style="font-weight: 600; color: #e66822; font-size: 18px; margin-bottom: 12px;"></p>
+                    <p id="pdfReviewContent" style="margin-bottom: 20px; line-height: 1.6; color: #444;"></p>
                     
-                    <!-- 📌 [คอมเม้นต์จุดเปลี่ยนไฟล์ PDF]: จุดที่ควรปรับปรุงในเอกสาร PDF เช่น เพิ่มตารางสรุปยอดขายเครื่องดื่มแต่ละประเภท, สถิติช่วงเวลาขายดี, และกราฟวงกลมแสดงความพึงพอใจของลูกค้า -->
+                    <!-- 📌 [คอมเม้นต์จุดเปลี่ยนไฟล์ PDF]: ข้อเสนอแนะในการปรับปรุงเนื้อหาในเอกสาร PDF เช่น เพิ่มตารางสถิติยอดขายแยกตามประเภทเครื่องดื่ม, กราฟแท่งเปรียบเทียบความพึงพอใจรายเดือน และภาพถ่ายรีวิวจากผู้ใช้งานจริง -->
                     <div class="pdf-comment-box">
-                        <strong>📌 คอมเม้นต์จุดเปลี่ยนไฟล์ PDF:</strong> ควรเพิ่มหน้าตารางสรุปยอดขายแยกตามประเภทเครื่องดื่ม และกราฟแสดงช่วงเวลาที่ลูกค้ามาใช้บริการมากที่สุดในไฟล์ PDF ฉบับจริง เพื่อให้ข้อมูลเชิงวิเคราะห์มีความครบถ้วนและเป็นประโยชน์ต่อการนำเสนอโครงงานมากยิ่งขึ้น
+                        <strong>📌 คอมเม้นต์จุดเปลี่ยนไฟล์ PDF:</strong> ควรเพิ่มหน้าตารางสรุปยอดขายแยกรายสัปดาห์ และกราฟวงกลมแสดงสัดส่วนความพึงพอใจของลูกค้าในเอกสาร PDF ฉบับจริง เพื่อให้รายงานโครงงานมีความสมบูรณ์และมีความเป็นมืออาชีพมากยิ่งขึ้น
                     </div>
                 </div>
             </div>
