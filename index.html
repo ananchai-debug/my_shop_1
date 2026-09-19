@@ -3,136 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แฟ้มสะสมผลงานและคลังเอกสาร - Cloud Portfolio</title>
-    <!-- โหลด Tailwind CSS ผ่าน CDN เพื่อความสวยงามและใช้งานง่าย -->
+    <title>ร้านเครื่องดื่มของฉัน - Fresh Drink</title>
+    <!-- โหลด Tailwind CSS ผ่าน CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Kanit', sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+<body class="bg-[#5c3a21] text-gray-800 flex flex-col min-h-screen">
 
     <!-- Header / Navbar -->
-    <header class="bg-indigo-700 text-white shadow-md">
-        <div class="max-w-5xl mx-auto px-4 py-6 flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-bold">📌นายอนันต์ชัย เพชรพันธ์📌</h1>
-                <p class="text-indigo-200 text-sm">📌Digital Business Technology & Cloud Educator📌</p>
+    <header class="bg-[#3d2514] text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-amber-100 rounded-full flex items-center justify-center overflow-hidden border border-amber-300">
+                    <span class="text-xs font-bold text-amber-800">Logo</span>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold">ร้านเครื่องดื่มของฉัน</h1>
+                    <p class="text-amber-200 text-xs">Fresh Drink</p>
+                </div>
             </div>
-            <span class="bg-indigo-800 text-indigo-100 text-xs px-3 py-1 rounded-full border border-indigo-500">
-                Hosted on GitHub Pages
-            </span>
+            <nav class="flex gap-6 text-sm font-medium">
+                <a href="#" class="text-amber-400 border-b-2 border-amber-400 pb-1">เมนูแนะนำ</a>
+                <a href="#" class="text-gray-300 hover:text-white transition">เมนูเพิ่มเติม</a>
+                <a href="#" class="text-gray-300 hover:text-white transition">โปรโมชั่น</a>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <main class="max-w-5xl mx-auto px-4 py-8 flex-grow space-y-8">
+    <main class="bg-gray-50 flex-grow space-y-8 pb-12">
 
-        <!-- Section 1: Profile & Intro -->
-        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6">
-            <!-- 📌จุดเปลี่ยนรูปภาพ: ดึงไฟล์รูปจากโฟลเดอร์ assets/images/profile.jpg บน GitHub -->
-            <img id="profile-img" 
-                 src="./assets/images/ChatGPT Image Aug 7, 2026, 12_15_40 PM.png" 
-                 alt="รูปโปรไฟล์" 
-                 onerror="this.src='https://via.placeholder.com/150?text=Upload+Image';"
-                 class="w-32 h-32 rounded-full object-cover border-4 border-indigo-100 shadow">
-            
-            <div class="space-y-2 text-center md:text-left">
-                <h2 class="text-xl font-bold text-gray-900">📌เกี่ยวกับฉัน & โครงสร้างระบบ📌</h2>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    📌เว็บไซต์นี้สร้างขึ้นเพื่อทดสอบการวางสถาปัตยกรรมคลาวด์เบื้องต้น โดยทำการ Deploy โค้ดผ่านระบบ **GitHub Actions (CI/CD)** 
-                    และเชื่อมต่อพื้นที่จัดเก็บข้อมูลไฟล์สาธารณะด้วย **GitHub Static Storage**📌
-                </p>
-            </div>
-        </section>
-
-        <!-- Section 2: Cloud Resource & Document Download -->
-        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
-            <h2 class="text-lg font-bold text-gray-900 border-b pb-2 flex items-center gap-2">
-                📌📂 คลังเอกสารดาวน์โหลด (GitHub Asset Hub)📌
-            </h2>
-            <p class="text-sm text-gray-500">
-                📌เอกสารทั้งหมดถูกจัดเก็บและเรียกใช้งานโดยตรงจากโฟลเดอร์ใน GitHub Repository📌
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                <!-- Document Card 1: Resume -->
-                <div class="p-4 border rounded-lg bg-gray-50 flex justify-between items-center">
-                    <div>
-                        <h3 class="font-medium text-gray-800">📌เอกสารประวัติส่วนตัว (Resume)📌</h3>
-                        <p class="text-xs text-gray-500">📌ไฟล์รูปแบบ PDF (GitHub Storage)📌</p>
-                    </div>
-                    <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/resume.pdf -->
-                    <a href="./assets/docs/Poster A4 (1).pdf">
-                        เปิดดูไฟล์
-                    </a>
+        <!-- Hero Section -->
+        <section class="bg-[#fcf8f2] py-12 px-6 border-b border-amber-100">
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="space-y-4 max-w-lg">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                        สดชื่นทุกแก้ว<br>กับเครื่องดื่มของเรา
+                    </h2>
+                    <p class="text-gray-600 text-sm">
+                        เครื่องดื่มคุณภาพ ราคานักเรียน
+                    </p>
+                    <button class="px-6 py-2 bg-amber-600 hover:bg-amber-700 text-white text-sm rounded-full font-medium transition shadow">
+                        ดูเมนู
+                    </button>
                 </div>
-
-                <!-- Document Card 2: Topology Diagram -->
-                <div class="p-4 border rounded-lg bg-gray-50 flex justify-between items-center">
-                    <div>
-                        <h3 class="font-medium text-gray-800">📌แผนผังระบบ (Topology Diagram)📌</h3>
-                        <p class="text-xs text-gray-500">📌ไฟล์รูปแบบ PDF/PNG📌</p>
-                    </div>
-                    <!-- 📌จุดปะไฟล์: ชี้ไปยังไฟล์ assets/docs/topology.pdf -->
-                     <a href="./assets/docs/Poster A4 (1).pdf">
-                        เปิดดูไฟล์
-                    </a>
+                <div class="flex gap-4">
+                    <div class="w-32 h-44 bg-amber-600 rounded-2xl shadow-lg flex items-center justify-center text-white font-bold">ชาไทย</div>
+                    <div class="w-32 h-44 bg-emerald-700 rounded-2xl shadow-lg flex items-center justify-center text-white font-bold">มัทฉะ</div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Contact Form / Client-side Action -->
-        <section class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 space-y-4">
-            <h2 class="text-lg font-bold text-gray-900 border-b pb-2">
-                 💬 ฝากข้อความติดต่อ (Client-Side Interactive Form)
-            </h2>
-            
-            <form id="contact-form" class="space-y-4 max-w-lg">
-                <div>
-                    <label class="block text-xs font-medium text-gray-700 mb-1">ชื่อผู้ติดต่อ</label>
-                    <input type="text" id="sender-name" required placeholder="กรอกชื่อของคุณ" 
-                           class="w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
-                </div>
-                <div>
-                    <label class="block text-xs font-medium text-gray-700 mb-1">ข้อความ</label>
-                    <textarea id="sender-message" rows="3" required placeholder="ข้อความที่ต้องการฝากไว้..." 
-                              class="w-full px-3 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
-                </div>
-                <button type="button" onclick="submitMessage()" 
-                        class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded-md font-medium transition shadow-sm">
-                    ส่งข้อความทดสอบ
-                </button>
-            </form>
-        </section>
+        <div class="max-w-5xl mx-auto px-4 space-y-8">
 
+            <!-- Section 1: เมนูแนะนำ (Featured Menu) -->
+            <section class="space-y-4">
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-gray-900">เมนูแนะนำ</h2>
+                    <p class="text-xs text-gray-500">เมนูยอดนิยมของร้าน</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <div class="w-24 h-28 bg-amber-500 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปชาไทย</div>
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">ชาไทยนมสด</h3>
+                            <p class="text-xs text-gray-500">หวาน หอม กลมกล่อม</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-amber-700 font-bold">฿40</span>
+                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <div class="w-24 h-28 bg-emerald-600 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปมัทฉะ</div>
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">มัทฉะนมสด</h3>
+                            <p class="text-xs text-gray-500">ชาเขียวแท้ หอมละมุน</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-amber-700 font-bold">฿45</span>
+                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: เมนูแนะนำเพิ่มเติม (Additional Menu) -->
+            <section class="bg-pink-50 p-6 rounded-3xl space-y-4 border border-pink-100">
+                <div class="text-center">
+                    <h2 class="text-xl font-bold text-gray-900">เมนูแนะนำเพิ่มเติม</h2>
+                    <p class="text-xs text-gray-500">อีก 2 เมนูที่น่าสนใจ</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Card 3 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <div class="w-24 h-28 bg-amber-800 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปโกโก้</div>
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">โกโก้นมสด</h3>
+                            <p class="text-xs text-gray-500">โกโก้เข้มข้น หอมมัน</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-amber-700 font-bold">฿45</span>
+                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
+                        <div class="w-24 h-28 bg-yellow-700 rounded-xl flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">รูปกาแฟ</div>
+                        <div class="flex-grow space-y-1">
+                            <h3 class="font-bold text-gray-800">กาแฟลาเต้</h3>
+                            <p class="text-xs text-gray-500">นุ่ม หอม เข้มกำลังดี</p>
+                            <div class="flex justify-between items-center pt-2">
+                                <span class="text-amber-700 font-bold">฿50</span>
+                                <button class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white text-xs rounded-lg transition">เปิดดูรีวิว</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Promotion Banner -->
+            <section class="bg-gradient-to-r from-pink-100 via-pink-50 to-pink-100 p-6 rounded-2xl border border-pink-200 text-center space-y-2">
+                <h3 class="text-xl font-bold text-pink-600">🎉 โปรโมชั่นพิเศษ! 🎉</h3>
+                <p class="text-lg font-semibold text-gray-800">ซื้อ 2 แก้ว ลดทันที 10 บาท</p>
+                <p class="text-xs text-gray-500">ตั้งแต่วันนี้ - 31 ธันวาคม 2566</p>
+            </section>
+
+        </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 border-t border-gray-200 mt-auto">
-        <div class="max-w-5xl mx-auto px-4 py-4 text-center text-xs text-gray-500">
-            📌© 2026 Cloud & DevOps Basic Course. Built for Educational Purpose on GitHub.📌
+    <!-- Footer / Creator Info -->
+    <footer class="bg-[#2a170b] text-white pt-8 pb-6 border-t border-[#3d2514]">
+        <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
+            <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center text-xs font-bold text-amber-800">Logo</div>
+                    <h3 class="font-bold">ร้านเครื่องดื่มของฉัน</h3>
+                </div>
+                <p class="text-xs text-amber-200">Fresh Drink</p>
+                <p class="text-xs text-gray-400">สดชื่นทุกแก้ว กับเครื่องดื่มคุณภาพ</p>
+            </div>
+
+            <div class="space-y-3 bg-[#3d2514] p-4 rounded-xl border border-amber-900/50">
+                <h4 class="font-bold text-amber-300 text-xs tracking-wider uppercase">ข้อมูลผู้จัดทำ</h4>
+                <div class="grid grid-cols-2 gap-2 text-xs text-gray-300">
+                    <div>ชื่อ-สกุล : ....................................</div>
+                    <div>ห้อง : ..........................</div>
+                    <div>สาขา : ....................................</div>
+                    <div>เลขที่ : ..........................</div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 pt-6 mt-6 border-t border-[#3d2514] text-center text-xs text-gray-400">
+            © 2026 ร้านเครื่องดื่มของฉัน | Student Project
         </div>
     </footer>
 
-    <!-- JavaScript สำหรับทดสอบระบบ -->
-    <script>
-        function submitMessage() {
-            const name = document.getElementById('sender-name').value;
-            const message = document.getElementById('sender-message').value;
-
-            if(!name || !message) {
-                alert('กรุณากรอกข้อมูลให้ครบถ้วน');
-                return;
-            }
-
-            console.log("Form Submitted:", { name, message });
-            alert(`ขอบคุณครับคุณ ${name}! ระบบรับข้อความเรียบร้อยแล้ว`);
-            
-            document.getElementById('sender-name').value = '';
-            document.getElementById('sender-message').value = '';
-        }
-    </script>
 </body>
 </html>
